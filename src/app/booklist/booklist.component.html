@@ -1,0 +1,16 @@
+<div class="row">
+  <div *ngFor="let book of books" class="column">
+    <img src="assets/{{book.bookImage}}.jpg" class="tn" width="150" height="230" />
+
+    <h3>
+      <a [title]="book.Name + ' Details'" [routerLink]="['/book', book.bookId]">
+        {{ book.bookName }}
+      </a>
+    </h3>
+
+    <div>
+      <button (click)="addToCheckout(book)">Buy Now</button>
+      <button (click)="addToCart(book)">Add To Cart</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.row {
+    padding: 4px;
+    margin: 4px
+}
+.column {
+    padding: 4px;
+    float: left;
+    text-align: center;
+}

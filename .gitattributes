@@ -1,0 +1,5 @@
+.dockerignore text eol=lf
+Dockerfile text eol=lf
+README.Docker.md text eol=lf
+compose.yaml text eol=lf
+mvnw text eol=lf

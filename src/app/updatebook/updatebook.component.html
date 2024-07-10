@@ -1,0 +1,59 @@
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <form [formGroup]="bookupdateform" #updbook (ngSubmit)="updateTheBook(updbook)">
+ 
+
+        <div class="modal-body" *ngIf="book">
+
+          <div [hidden]="isupdated">
+            
+            <input type="hidden" class="form-control" formControlName="book_id" [(ngModel)]="book.bookId"/>
+           
+            <div class="form-group">
+              <label for="name">Book Name</label>
+              <input type="text" class="form-control" formControlName="book_name" [(ngModel)]="book.bookName"/>
+            </div>
+
+            <div class="form-group">
+              <label for="year">Year Published</label>
+              <input type="text" class="form-control" formControlName="year_published" [(ngModel)]="book.yearPublished"/>
+            </div>
+           
+            <div class="form-group">
+                <label for="genre">Book Genre</label>
+                <input type="text" class="form-control" formControlName="book_genre" [(ngModel)]="book.bookGenre"/>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Book Description</label>
+                <textarea rows="5" cols="100" class="form-control" 
+                    formControlName="book_description" [(ngModel)]="book.bookDescription">                      
+                </textarea>
+    
+            </div>
+          
+          </div>
+
+          <div [hidden]="!isupdated">
+            <h4>Book Details Updated!</h4>
+            <a [routerLink]="['/book', book.bookId]">
+                <i class="material-icons navigate_before">navigate_before</i>Go Back
+            </a>
+          </div>
+
+
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" [hidden]="isupdated">Update</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<h2>Book Details</h2>
+
+<div *ngIf="book">
+
+  <table>
+    <tr>
+      <td>
+        <img src=" assets/{{book.bookImage}}.jpg " class="tn" width="200" height="290">
+      </td>
+      <td>
+        <h1>{{ book.bookName }}</h1>
+        <h2>{{ book.yearPublished }}</h2>
+        <h6><i>{{ book.bookGenre }}</i></h6>
+        <p>{{ book.bookDescription }}</p>
+      </td>
+    </tr>
+  </table>
+
+  <button [routerLink]="['/update', book.bookId]">Update Book</button>
+  <button (click)="addToCart(book)">Add To Cart</button>
+
+</div>
