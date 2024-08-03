@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from '../services/book-service/book';
 import { Subject, Observable } from 'rxjs';
-import {UntypedFormControl,UntypedFormGroup,FormsModule,Validators} from '@angular/forms'; 
+import {UntypedFormControl,UntypedFormGroup} from '@angular/forms'; 
 import { BookService } from '../services/book-service/book.service';
 
 
@@ -30,7 +30,7 @@ export class UpdatebookComponent implements OnInit {
 
     this.bookService.getBook(this.bookid).subscribe(data =>{  
       this.book=data[0];  
-      this.dtTrigger.next();  
+      this.dtTrigger.next(null);  
       }) 
   }
   

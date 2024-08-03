@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CartService } from '../cart.service';
+import { CartService } from '../services/cart-service/cart.service';
 import { Book } from '../services/book-service/book'; 
 import { Observable,Subject } from "rxjs";  
 
@@ -41,7 +41,7 @@ export class BookdetailComponent implements OnInit {
       this.book=data[0];
       //Set Book Image
       this.book.bookImage=this.book.bookName.toLowerCase().replace(/ /g,"-");
-      this.dtTrigger.next();
+      this.dtTrigger.next(null);
     }) 
 
 

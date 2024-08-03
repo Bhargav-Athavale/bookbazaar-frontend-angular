@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Book } from "../services/book-service/book";
 import { ActivatedRoute } from "@angular/router";
-import { CartService } from "../cart.service";
+import { CartService } from "../services/cart-service/cart.service";
 import { CheckoutService } from "../services/checkout-service/checkout.service";
 import { Observable, Subject } from "rxjs";
 import { BookService } from "../services/book-service/book.service";
@@ -41,7 +41,7 @@ export class BooklistComponent implements OnInit {
         val.bookImage=val.bookName.toLowerCase().replace(/ /g,"-");
       });
 
-      this.dtTrigger.next();
+      this.dtTrigger.next(null);
     });
   }
 
