@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Book } from '../services/book-service/book';
 import { Subject, Observable } from 'rxjs';
-import {FormControl,FormGroup,FormsModule,Validators} from '@angular/forms'; 
+import {UntypedFormControl,UntypedFormGroup,FormsModule,Validators} from '@angular/forms'; 
 import { BookService } from '../services/book-service/book.service';
 
 
@@ -43,12 +43,12 @@ export class UpdatebookComponent implements OnInit {
   }  
 
   //Book Update Form
-  bookupdateform=new FormGroup({  
-    book_id:new FormControl(),  
-    book_name:new FormControl(),  
-    year_published:new FormControl(),  
-    book_genre:new FormControl(),
-    book_description:new FormControl()   
+  bookupdateform=new UntypedFormGroup({  
+    book_id:new UntypedFormControl(),  
+    book_name:new UntypedFormControl(),  
+    year_published:new UntypedFormControl(),  
+    book_genre:new UntypedFormControl(),
+    book_description:new UntypedFormControl()   
   });  
 
   //Book Update Method

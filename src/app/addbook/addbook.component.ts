@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormControl, Validators } from '@angular/forms';
 import { Book } from '../services/book-service/book';
 import { BookService } from '../services/book-service/book.service';
 
@@ -19,11 +19,11 @@ export class AddbookComponent implements OnInit {
     this.submitted=false;  
   }  
 
-  booksaveform=new FormGroup({  
-    book_name:new FormControl('' , [Validators.required] ),  
-    year_published:new FormControl('' , [Validators.required]),  
-    book_genre:new FormControl('' , [Validators.required]),
-    book_description:new FormControl('',[Validators.required])
+  booksaveform=new UntypedFormGroup({  
+    book_name:new UntypedFormControl('' , [Validators.required] ),  
+    year_published:new UntypedFormControl('' , [Validators.required]),  
+    book_genre:new UntypedFormControl('' , [Validators.required]),
+    book_description:new UntypedFormControl('',[Validators.required])
   });  
 
 
