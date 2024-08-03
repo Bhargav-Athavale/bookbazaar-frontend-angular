@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "bookstore-frontend:build"
+            "buildTarget": "bookstore-frontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "bookstore-frontend:build:production"
+              "buildTarget": "bookstore-frontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "bookstore-frontend:build"
+            "buildTarget": "bookstore-frontend:build"
           }
         },
         "test": {
