@@ -7,7 +7,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BookService } from './services/book-service/book.service';
-import { MatIconModule } from '@angular/material';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({ declarations: [
         AppComponent,
