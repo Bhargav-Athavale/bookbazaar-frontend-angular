@@ -1,9 +1,31 @@
-.row {
-    padding: 4px;
-    margin: 4px
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    padding: 60px;
+    margin: 4px;
 }
-.column {
-    padding: 4px;
-    float: left;
+
+.flex-item {
+    flex: 1 1 calc(20% - 10px); /* Three columns layout with gap adjustment */
+    box-sizing: border-box; /* Ensure padding does not affect width */
     text-align: center;
+    padding: 4px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .flex-item {
+        flex: 1 1 calc(50% - 10px); /* Two columns layout on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-item {
+        flex: 1 1 100%; /* Single column layout on small screens */
+    }
+}
+
+.book_image{
+    height:
 }

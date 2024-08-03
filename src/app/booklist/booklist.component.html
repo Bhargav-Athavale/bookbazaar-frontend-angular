@@ -1,6 +1,7 @@
-<div class="row">
-  <div *ngFor="let book of books" class="column">
-    <img src="assets/{{book.bookImage}}.jpg" class="tn" width="150" height="230" />
+<div class="flex-container">
+  <div *ngFor="let book of books" class="flex-item">
+
+    <img src="assets/{{book.bookImage}}.jpg" class="book_image" width="150" height="230" />
 
     <h3>
       <a [title]="book.Name + ' Details'" [routerLink]="['/book', book.bookId]">
