@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CheckoutService } from '../checkout.service';
+import { CheckoutService } from '../services/checkout-service/checkout.service';
 
 @Component({
   selector: 'app-checkout',

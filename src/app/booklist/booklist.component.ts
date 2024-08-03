@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Book } from "../services/book-service/book";
 import { ActivatedRoute } from "@angular/router";
 import { CartService } from "../cart.service";
-import { CheckoutService } from "../checkout.service";
+import { CheckoutService } from "../services/checkout-service/checkout.service";
 import { Observable, Subject } from "rxjs";
 import { BookService } from "../services/book-service/book.service";
 
