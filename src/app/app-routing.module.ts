@@ -9,8 +9,8 @@ import { UpdatebookComponent } from './updatebook/updatebook.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'books-list', pathMatch: 'full'},
-  { path: 'books-list',component:BooklistComponent},
+  { path: '', redirectTo: 'books', pathMatch: 'full'},
+  { path: 'books',component:BooklistComponent},
   { path: 'book/:bookId',component:BookdetailComponent},
   { path: 'cart', component: CartComponent},
   { path: 'checkout',component:CheckoutComponent},

@@ -38,7 +38,8 @@ export class BooklistComponent implements OnInit {
       this.books = data;
       //Set Book Image
       this.books.forEach(function(val){
-        val.bookImage=val.bookName.toLowerCase().replace(/ /g,"-");
+        val.bookImage=val.bookName
+        //.toLowerCase().replace(/ /g,"-");
       });
 
       this.dtTrigger.next(null);
